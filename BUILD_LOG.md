@@ -183,3 +183,30 @@ Latest CSV zips as listed on the page (verified from the page's own "Latest Down
   Not printed, not stored in files or memory.
 - Still pending: GitHub PAT (private repo push), Jeremiah's legal-page review,
   connector registration, Meta submission.
+
+## 2026-09-25 10:35 HST - GitHub repo pushed
+- Repo: https://github.com/dexiadigi-cloud/trophe-api (private)
+- Commit 38ff13d "Trophe v1" on top of Jeremiah's initial "Create Test" commit.
+- All 18 DB chunks (part-00..part-17) verified present via API.
+- Classic PAT used once for repo creation attempt + push, then deleted from VM.
+  Jeremiah can delete/revoke the token on GitHub.
+
+## 2026-09-25 10:42 HST - Approvals
+- Legal wording approved by Jeremiah (privacy + terms, v1.0 effective 2026-09-24). No changes.
+- Logo: option B (bowl + leaf). Saved as trophe-logo-official.webp/.png.
+
+## 2026-09-25 11:05 HST - Production API key rotated
+- New revision trophe-00002-zvx serving 100% traffic (env var TROPHE_API_KEY replaced).
+- Verified live: authenticated search -> 200 (egg first hit 171287 sr_legacy), unauthenticated -> 401.
+- Deploy SA key revoked via gcloud auth revoke; /tmp key files wiped.
+- New key shown to Jeremiah one time in chat for the connector card; not stored in files or memory.
+
+## 2026-09-25 11:20 HST - Connector registered + end-to-end test
+- custom.trophe credential stored via connector card; placement custom_header:X-API-Key.
+- Skill CLI switched to dynamic_credentials surrogate flow (custom.trophe), Cloud Run host.
+- All 7 commands verified through the stored credential:
+  health ok (2,013,644 foods); search egg -> 171287 sr_legacy first;
+  food 171287 protein 12.56g (25.1% DV); nutrients 477;
+  meal 171287:100 -> 143 kcal; compare 171287,172183 -> 143 vs 52 kcal;
+  brands kraft -> Kraft Heinz Foods Company (12,211 foods).
+- SKILL.md updated from stale local-only to hosted state; REGISTRY.md updated.
