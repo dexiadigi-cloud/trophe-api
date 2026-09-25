@@ -1,0 +1,84 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Trophe - Privacy Policy</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+line-height:1.65;color:#1a1a1a;max-width:46rem;margin:0 auto;padding:2rem 1.25rem;}
+h1{font-size:2rem;margin-bottom:.25rem;} h2{font-size:1.25rem;margin-top:2rem;}
+.tag{color:#555;font-size:1.1rem;margin-top:0;}
+table{border-collapse:collapse;width:100%;margin:1rem 0;}
+th,td{text-align:left;padding:.5rem .75rem;border-bottom:1px solid #e2e2e2;vertical-align:top;}
+code{background:#f4f4f4;padding:.15rem .4rem;border-radius:4px;font-size:.9em;}
+pre{background:#f4f4f4;padding:1rem;border-radius:6px;overflow-x:auto;}
+a{color:#0b5fff;} .fine{color:#666;font-size:.9rem;margin-top:2.5rem;border-top:1px solid #e2e2e2;padding-top:1rem;}
+nav{margin:1.5rem 0;} nav a{margin-right:1.25rem;}
+</style></head><body>
+<h1>Trophe - Privacy Policy</h1>
+<p class="fine" style="border:none;margin-top:0;padding-top:0">Effective 2026-09-24. Version 1.0.</p>
+<p>Trophe is a free food &amp; nutrition API. This policy explains what
+information Trophe handles when you use the API, and what it does not handle.
+If you are the operator deploying this API, you are responsible for telling
+your API users what extra logging your own deployment performs (operator
+contact details are in the Contact section below).</p>
+<h2>What Trophe does</h2>
+<p>Trophe serves food and nutrient data from the USDA FoodData Central database
+(released under CC0 1.0, public domain) via a local read-only SQLite index.
+Every response is food or nutrient reference data. No user accounts exist, no
+sign-up is possible, and no personal profiles are created. The API is
+read-only: nothing you send is stored. Meal estimates are computed per request
+and never saved.</p>
+<h2>What is collected</h2>
+<p><strong>The API key.</strong> Trophe authenticates requests with a single
+shared key sent in the <code>X-API-Key</code> header. The key is compared in
+constant time against the <code>TROPHE_API_KEY</code> environment variable on
+the server. Because one key is shared, a request cannot be tied to a specific
+person, account, or device. Trophe has no way to know who you are from the key
+alone.</p>
+<p><strong>Request logs.</strong> The Trophe application code itself does no
+request logging. The server process that runs Trophe (for example, uvicorn)
+may write access logs that include the client's IP address and request path.
+The operator's intent is that any such logs are kept for no longer than 30
+days and then rotated or deleted, and are visible only to the operator for
+debugging and abuse prevention. (The hosting platform keeps its own platform
+logs under its own policies, outside the operator's control.)</p>
+<h2>What is NOT collected</h2>
+<ul>
+<li><strong>No user accounts.</strong> There is no registration, no login, no
+passwords, and no profile data of any kind.</li>
+<li><strong>No tracking cookies.</strong> Trophe is an API, not a website, and
+sets no cookies.</li>
+<li><strong>No analytics on users.</strong> Trophe does not track who you are,
+what you look up, or how often. Food searches, nutrient profiles, meal
+estimates, and comparisons leave no record on the server.</li>
+<li><strong>No payment data.</strong> Trophe is free; no payment information is
+ever requested or stored.</li>
+<li><strong>No advertising.</strong> No ads are served and no data is collected
+for advertising.</li>
+</ul>
+<h2>Data retention</h2>
+<p>Trophe retains nothing about its users. There is no user-data store to
+expire or delete. Any operator-kept access logs are intended to be kept no
+longer than 30 days and then rotated or deleted, as described above.</p>
+<h2>Security</h2>
+<p>The API key travels in the <code>X-API-Key</code> request header. Users of a
+hosted Trophe instance should confirm with the operator that the API is served
+over HTTPS so the key is not transmitted in clear text. The server stores the
+expected key in the <code>TROPHE_API_KEY</code> environment variable, never in
+the codebase or database.</p>
+<h2>Children's privacy</h2>
+<p>Trophe collects no personal information from anyone, including children.
+There are no accounts and no way to submit personal data through the API.</p>
+<h2>International users</h2>
+<p>Because Trophe collects no personal data, there is no personal data to
+transfer, store, or process across borders. If the operator keeps access logs
+containing IP addresses, the operator is responsible for complying with the
+applicable rules of the relevant jurisdictions.</p>
+<h2>Reference data disclaimer</h2>
+<p>Trophe provides reference data only, not medical or dietary advice. Branded
+food values are manufacturer self-reported; verify against the package label.</p>
+<h2>Changes to this policy</h2>
+<p>Material changes to this policy will be posted here with a new effective
+date before they take effect.</p>
+<h2>Contact</h2>
+<p>Operator contact for privacy questions: dexiadigi@gmail.com</p>
+</body></html>

@@ -1,0 +1,14 @@
+# Git
+.venv/
+__pycache__/
+*.pyc
+
+# Raw build inputs (rebuilt from USDA bulk CSVs; not needed to run)
+/data/*.db
+!/data/dist/
+*.csv
+*.zip
+
+# Local dev
+.env
+*.log
