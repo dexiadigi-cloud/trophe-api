@@ -210,3 +210,17 @@ Latest CSV zips as listed on the page (verified from the page's own "Latest Down
   meal 171287:100 -> 143 kcal; compare 171287,172183 -> 143 vs 52 kcal;
   brands kraft -> Kraft Heinz Foods Company (12,211 foods).
 - SKILL.md updated from stale local-only to hosted state; REGISTRY.md updated.
+
+## 2026-09-25 11:10 HST
+- Local commit: BUILD_LOG.md + trophe-logo-official.png/.webp ("Docs: build log updates and official bowl-and-leaf logo").
+- Push to origin/main BLOCKED: no GitHub credential on the VM (one-time PAT from the earlier session is gone; vault is write-only so a stored PAT can't be used for git). Push waits for a fresh credential or until Jeremiah is back at his Mac.
+- Meta submission sheet written: META_SUBMISSION.md (all URLs, disclaimer, reviewer notes).
+
+## 2026-09-25 11:35 HST
+- Trophe SUBMITTED to Meta for built-in connector review (Jeremiah, from his phone).
+  Submission: Raw API, API key auth, all URLs verified, bowl-and-leaf icon (512px, 126 KiB).
+  Meta had 2,000+ submissions in the queue as of 2026-09-23; expect a wait.
+
+## 2026-09-25 11:40 HST
+- Jeremiah deleted the exposed GitHub PATs and GCP service-account keys cloud-side.
+  Security cleanup complete. Local key files were already wiped and gcloud auth revoked earlier.
