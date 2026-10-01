@@ -1,5 +1,7 @@
 # Trophe API
 
+☕ [Support on Ko-fi](https://ko-fi.com/dexiadigi)
+
 Trophe is a free food & nutrition lookup API. Search 2M+ foods, get per-100g
 nutrient profiles with % Daily Values, estimate whole meals, and compare foods
 side by side.
