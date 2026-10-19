@@ -1,3 +1,5 @@
+# Trophe (Food & Nutrition API)
+
 > Trophe is a food and nutrition API built on USDA FoodData Central: 2M foods, 27M nutrient rows.
 
 **Data:** USDA FoodData Central (CC0, U.S. public domain) - no licensing restrictions.
